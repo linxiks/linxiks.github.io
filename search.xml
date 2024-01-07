@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>Hello World</title>
+    <url>/2024/01/07/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>idea学习记录</title>
+    <url>/2024/01/07/idea%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</url>
+    <content><![CDATA[<h3 id="idea设置"><a href="#idea设置" class="headerlink" title="idea设置"></a>idea设置</h3><ul>
+<li>文件编码：解决项目或控制台乱码</li>
+<li>添加代码模板，可快速编写一些固定的代码片段</li>
+<li>设置代码提示不区分大小写</li>
+<li>自动导入需要的包</li>
+<li>显示方法线，让代码更加清晰</li>
+<li>设置tab多行显示，修改tab最大数量</li>
+<li>自动生成serialVersionUID</li>
+</ul>
+<span id="more"></span>
+
+<h3 id="Java编译"><a href="#Java编译" class="headerlink" title="Java编译"></a>Java编译</h3><ul>
+<li>Compile：对选定的目标进行强制性编译。</li>
+<li>Rebuild：对选定的项目进行强制性编译，不管目标是否是被修改过</li>
+<li>Make：对选定的目标（Project 或 Module）进行编译，但只编译有修改过的文件，没有修改过的文件不会编译</li>
+</ul>
+<h3 id="使用技巧"><a href="#使用技巧" class="headerlink" title="使用技巧"></a>使用技巧</h3><h5 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h5><table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Ctrl + Alt + T</td>
+<td>可以对指定代码片段进行环绕，例如添加if语句、try、折叠等</td>
+</tr>
+<tr>
+<td>Ctrl + E</td>
+<td>打开菜单，可以看最近打开的文件、以及一些面板</td>
+</tr>
+<tr>
+<td>Ctrl + R</td>
+<td>进行文本替换</td>
+</tr>
+<tr>
+<td>Ctrl + Y</td>
+<td>删除所在行</td>
+</tr>
+<tr>
+<td>Alt + F8</td>
+<td>调试时打开输入面板，查看代码运行结果</td>
+</tr>
+<tr>
+<td>Alt + 左右方向键</td>
+<td>在前后操作处进行快速跳转</td>
+</tr>
+<tr>
+<td>Ctrl + Alt + S</td>
+<td>打开系统设置</td>
+</tr>
+<tr>
+<td>Ctrl + Shift + U</td>
+<td>对内容进行大小写转换</td>
+</tr>
+<tr>
+<td>Ctrl + B</td>
+<td>跳转到方法或类定义、使用处</td>
+</tr>
+<tr>
+<td>Ctrl + H</td>
+<td>打开类父类和子类列表</td>
+</tr>
+<tr>
+<td>Ctrl + K</td>
+<td>git提交代码</td>
+</tr>
+</tbody></table>
+<h5 id="debug"><a href="#debug" class="headerlink" title="debug"></a>debug</h5><ul>
+<li>在断点处可以调出窗口来输入代码查看运行结果，快捷键：alt+F8</li>
+<li>在断点处可以设置断点的触发条件<ul>
+<li>输入判断语句</li>
+<li>设置第几次经过断点时触发</li>
+<li>设置在其他指定断点触发后触发</li>
+<li>设置触发一次后取消断点</li>
+</ul>
+</li>
+</ul>
+<h5 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h5><ul>
+<li>可以对选定表进行实体类生成</li>
+</ul>
+<h5 id="版本控制"><a href="#版本控制" class="headerlink" title="版本控制"></a>版本控制</h5><ul>
+<li>可以查看git提交图，可以撤销上次提交</li>
+<li>git flow流程</li>
+</ul>
+<h5 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h5><ul>
+<li>查找文件时加上冒号和行数直接跳到查找文件的指定行数</li>
+<li>可以将文件或者某一代码处添加标签，在收藏夹里可以看到</li>
+<li>查看文件或代码片段的修改历史</li>
+<li>添加todo标签，idea可以列出todo列表</li>
+<li>debug时也可以打开断点列表，对断点进行设置</li>
+<li>设置某些后缀的文件打开方式</li>
+<li>设置运行时的步骤，可以在运行项目前让maven自动运行install</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>study</tag>
+      </tags>
+  </entry>
+</search>
