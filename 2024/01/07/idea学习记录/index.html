@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 7.1.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"linxiks.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="idea设置 文件编码：解决项目或控制台乱码 添加代码模板，可快速编写一些固定的代码片段 设置代码提示不区分大小写 自动导入需要的包 显示方法线，让代码更加清晰 设置tab多行显示，修改tab最大数量 自动生成serialVersionUID">
+<meta property="og:type" content="article">
+<meta property="og:title" content="idea学习记录">
+<meta property="og:url" content="https://linxiks.github.io/2024/01/07/idea%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="idea设置 文件编码：解决项目或控制台乱码 添加代码模板，可快速编写一些固定的代码片段 设置代码提示不区分大小写 自动导入需要的包 显示方法线，让代码更加清晰 设置tab多行显示，修改tab最大数量 自动生成serialVersionUID">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2024-01-07T13:32:21.000Z">
+<meta property="article:modified_time" content="2024-08-02T08:27:39.344Z">
+<meta property="article:author" content="linxiks">
+<meta property="article:tag" content="study">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://linxiks.github.io/2024/01/07/idea%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>idea学习记录 | Hexo</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Hexo</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">1</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">0</span></a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">1</span></a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://linxiks.github.io/2024/01/07/idea%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="linxiks">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          idea学习记录
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2024-01-07 21:32:21" itemprop="dateCreated datePublished" datetime="2024-01-07T21:32:21+08:00">2024-01-07</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2024-08-02 16:27:39" itemprop="dateModified" datetime="2024-08-02T16:27:39+08:00">2024-08-02</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h3 id="idea设置"><a href="#idea设置" class="headerlink" title="idea设置"></a>idea设置</h3><ul>
+<li>文件编码：解决项目或控制台乱码</li>
+<li>添加代码模板，可快速编写一些固定的代码片段</li>
+<li>设置代码提示不区分大小写</li>
+<li>自动导入需要的包</li>
+<li>显示方法线，让代码更加清晰</li>
+<li>设置tab多行显示，修改tab最大数量</li>
+<li>自动生成serialVersionUID</li>
+</ul>
+<span id="more"></span>
+
+<h3 id="Java编译"><a href="#Java编译" class="headerlink" title="Java编译"></a>Java编译</h3><ul>
+<li>Compile：对选定的目标进行强制性编译。</li>
+<li>Rebuild：对选定的项目进行强制性编译，不管目标是否是被修改过</li>
+<li>Make：对选定的目标（Project 或 Module）进行编译，但只编译有修改过的文件，没有修改过的文件不会编译</li>
+</ul>
+<h3 id="使用技巧"><a href="#使用技巧" class="headerlink" title="使用技巧"></a>使用技巧</h3><h5 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h5><table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Ctrl + Alt + T</td>
+<td>可以对指定代码片段进行环绕，例如添加if语句、try、折叠等</td>
+</tr>
+<tr>
+<td>Ctrl + E</td>
+<td>打开菜单，可以看最近打开的文件、以及一些面板</td>
+</tr>
+<tr>
+<td>Ctrl + R</td>
+<td>进行文本替换</td>
+</tr>
+<tr>
+<td>Ctrl + Y</td>
+<td>删除所在行</td>
+</tr>
+<tr>
+<td>Alt + F8</td>
+<td>调试时打开输入面板，查看代码运行结果</td>
+</tr>
+<tr>
+<td>Alt + 左右方向键</td>
+<td>在前后操作处进行快速跳转</td>
+</tr>
+<tr>
+<td>Ctrl + Alt + S</td>
+<td>打开系统设置</td>
+</tr>
+<tr>
+<td>Ctrl + Shift + U</td>
+<td>对内容进行大小写转换</td>
+</tr>
+<tr>
+<td>Ctrl + B</td>
+<td>跳转到方法或类定义、使用处</td>
+</tr>
+<tr>
+<td>Ctrl + H</td>
+<td>打开类父类和子类列表</td>
+</tr>
+<tr>
+<td>Ctrl + K</td>
+<td>git提交代码</td>
+</tr>
+</tbody></table>
+<h5 id="debug"><a href="#debug" class="headerlink" title="debug"></a>debug</h5><ul>
+<li>在断点处可以调出窗口来输入代码查看运行结果，快捷键：alt+F8</li>
+<li>在断点处可以设置断点的触发条件<ul>
+<li>输入判断语句</li>
+<li>设置第几次经过断点时触发</li>
+<li>设置在其他指定断点触发后触发</li>
+<li>设置触发一次后取消断点</li>
+</ul>
+</li>
+</ul>
+<h5 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h5><ul>
+<li>可以对选定表进行实体类生成</li>
+</ul>
+<h5 id="版本控制"><a href="#版本控制" class="headerlink" title="版本控制"></a>版本控制</h5><ul>
+<li>可以查看git提交图，可以撤销上次提交</li>
+<li>git flow流程</li>
+</ul>
+<h5 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h5><ul>
+<li>查找文件时加上冒号和行数直接跳到查找文件的指定行数</li>
+<li>可以将文件或者某一代码处添加标签，在收藏夹里可以看到</li>
+<li>查看文件或代码片段的修改历史</li>
+<li>添加todo标签，idea可以列出todo列表</li>
+<li>debug时也可以打开断点列表，对断点进行设置</li>
+<li>设置某些后缀的文件打开方式</li>
+<li>设置运行时的步骤，可以在运行项目前让maven自动运行install</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/study/" rel="tag"># study</a>
+          </div>
+
+        
+
+
+        
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#idea%E8%AE%BE%E7%BD%AE"><span class="nav-text">idea设置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Java%E7%BC%96%E8%AF%91"><span class="nav-text">Java编译</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7"><span class="nav-text">使用技巧</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%BF%AB%E6%8D%B7%E9%94%AE"><span class="nav-text">快捷键</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#debug"><span class="nav-text">debug</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="nav-text">数据库</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6"><span class="nav-text">版本控制</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%85%B6%E4%BB%96"><span class="nav-text">其他</span></a></li></ol></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">linxiks</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">1</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">linxiks</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
