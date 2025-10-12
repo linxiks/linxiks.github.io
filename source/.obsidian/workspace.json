@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_posts/work/test.md.md",
+                "file": "_posts/操作系统.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "test.md"
+              "title": "操作系统"
             }
           }
         ]
@@ -167,14 +167,14 @@
       "templates:插入模板": false,
       "command-palette:打开命令面板": false,
       "bases:创建新数据库": false,
-      "sample-plugin:Hexo - 创建文档": false,
-      "sample-plugin:Hexo - 上传": false
+      "sample-plugin:Hexo - 上传": false,
+      "sample-plugin:Hexo - 创建文档": false
     }
   },
   "active": "1f5bdb7598e46260",
   "lastOpenFiles": [
-    "_posts/obsidian插件开发.md",
     "_posts/work/test.md.md",
+    "_posts/obsidian插件开发.md",
     "about/index.md",
     "_posts/work",
     "_posts/Java.md",
