@@ -1,1 +1,2 @@
-hexo clean && hexo g && hexo d
+npm install -g hexo-cli && npm install
+
